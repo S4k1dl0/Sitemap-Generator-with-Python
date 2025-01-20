@@ -1,5 +1,7 @@
 # Sitemap API
 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+
 A simple Flask application for generating and managing sitemaps with API key authentication.
 
 ## Features
