@@ -25,3 +25,4 @@ def test_generate_api_key(client):
     assert response.status_code == 201
     json_data = response.get_json()
     assert 'key' in json_data
+    
