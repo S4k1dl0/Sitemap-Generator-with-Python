@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_httpauth import HTTPTokenAuth
 from app.database import init_db
+from flask_httpauth import HTTPTokenAuth
 
 auth = HTTPTokenAuth(scheme='Bearer')
 
