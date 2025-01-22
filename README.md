@@ -12,7 +12,7 @@ A simple Flask application for generating and managing sitemaps with API key aut
 
 ## Setup
 
-1. Clone the repository:
+1. Clone the repository: 
    ```bash
    git clone <repository_url>
    cd project
