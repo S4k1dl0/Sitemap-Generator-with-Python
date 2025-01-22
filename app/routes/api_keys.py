@@ -2,6 +2,7 @@ from flask import Blueprint, request, jsonify
 from app.database import get_db_connection
 from app.utils import log_action
 import secrets
+import sqlite3  # เพิ่มการนำเข้า sqlite3 เพื่อใช้งานการจับข้อผิดพลาด
 
 bp = Blueprint('api_keys', __name__)
 
@@ -15,7 +16,7 @@ def generate_api_key():
         conn.commit()
         log_action('Generate API Key', f'API Key {key} created')
         return jsonify({'message': 'API Key generated successfully', 'key': key}), 201
-    except sqlite3.IntegrityError:
+    except sqlite3.IntegrityError:  # ใช้ sqlite3 เพื่อจับข้อผิดพลาด IntegrityError
         return jsonify({'error': 'API Key already exists'}), 400
     finally:
         conn.close()
