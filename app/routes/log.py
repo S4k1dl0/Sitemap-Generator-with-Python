@@ -4,7 +4,7 @@ from app.database import get_db_connection
 bp = Blueprint('logs', __name__, url_prefix='/logs')
 
 @bp.route('/', methods=['GET'])
-def list_logs():
+def list_logs(): 
     """Retrieve and return all logs."""
     conn = get_db_connection()
     cursor = conn.cursor()
